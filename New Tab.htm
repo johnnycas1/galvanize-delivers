@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/dashboard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>New Tab</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/css/color.min.css">
+<link rel="stylesheet" href="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/css/style.min.css">
+<style type="text/css" id="font-override"></style></head><body class="f--default has-bookmarks Chrome"><svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="icon-folder" viewBox="0 0 512 512">
+<path d="M390.5 144h-167c-4.7 0-10.7-9.9-18.5-19-7.1-8.3-14.7-13-20.5-13h-60.3c-15.5 0-28.2 8.9-28.2 24.3v234.6c0 15.5 12.7 29.1 28.2 29.1h266.3c15.5 0 25.5-13.6 25.5-29.1V168.8c0-15.5-10-24.8-25.5-24.8zm-266.3-16H179.3c3.9 0 8.6 1.6 14.3 8.3 12.1 14.3 15.5 23.7 29.9 23.7h167c6.6 0 9.5 2.2 9.5 8.8V192H112v-55.7c0-9 10.3-8.3 12.2-8.3zm266.3 256H124.2c-6.5 0-12.2-6.2-12.2-13.1V208h288v162.9c0 6-2.6 13.1-9.5 13.1z"></path>
+</symbol>
+</defs>
+</svg>
+
+
+<div class="bookmarks-bar bookmarks-placeholder" style="display: block; position: fixed; top: 0px; left: 0px; right: 0px; height: 31px; background-color: rgb(242, 242, 242); border-bottom: 0.5px solid rgba(182, 180, 182, 0.4);">
+</div>
+<div class="overlay loading-overlay">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" class="loading-logo" fill="#ccc">
+<path d="M500.024 1000.08C223.851 1000.08-.032 776.2-.032 500.024S223.851-.032 500.024-.032s500.056 223.883 500.056 500.056S776.2 1000.08 500.024 1000.08zm250.33-523.321a228.485 228.485 0 0 0-5.749-51.018 136.773 136.773 0 0 0-19.042-45.27 98.029 98.029 0 0 0-35.928-32.336Q667 335.925 633.946 335.92q-43.839 0-78.324 26.228t-48.863 75.09h-1.437a172.1 172.1 0 0 0-11.5-39.881 108.707 108.707 0 0 0-20.839-31.976 92.149 92.149 0 0 0-31.976-21.557q-19.048-7.9-44.911-7.9a120.578 120.578 0 0 0-74.372 25.509 147.849 147.849 0 0 0-29.1 30.539 141.892 141.892 0 0 0-20.12 40.959h-1.437q0-9.332-.359-21.2t-.718-24.431q-.37-12.562-.718-23.353-.371-10.779-1.078-17.964h-15.809q.708 7.191 1.438 17.964.707 10.779 1.077 22.635.354 11.856.719 23.353t.359 19.4v247.187h15.809V511.251q0-38.079 9.7-67.9 9.7-29.809 26.588-50.659A117.245 117.245 0 0 1 347.6 360.71a108.444 108.444 0 0 1 48.5-11.137q29.455 0 48.5 12.575a92.92 92.92 0 0 1 29.82 31.257 125.19 125.19 0 0 1 14.731 41.677 256.2 256.2 0 0 1 3.952 43.114v198.326h15.809V511.251q0-38.079 10.06-67.9 10.054-29.809 26.946-50.659a117.245 117.245 0 0 1 39.521-31.977 108.445 108.445 0 0 1 48.5-11.137q29.455 0 48.863 12.575a98.748 98.748 0 0 1 30.9 31.257 127.515 127.515 0 0 1 16.168 41.677 217.585 217.585 0 0 1 4.67 43.114v198.321h15.809V476.759z"></path>
+</svg>
+</div>
+<div class="background-overlay show"></div>
+<ul id="background" class="background"><li class="fadein" style="background-image: url(&quot;https://images.unsplash.com/photo-1503788760144-795d5cdf0f56?ixlib=rb-0.3.5&amp;q=99&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2048&amp;fit=max&amp;s=bcbc48e726c14d200b3e8f1275de8e19&quot;);"></li></ul>
+<div class="widgets show-widgets">
+<div id="full"></div>
+<div id="top-bar"><div id="bookmarks" class="bookmarks top-widget show animating"><div class="bookmarks-wrapper" style="left:0">
+	<ul class="bookmarks-list" id="active-bookmarks" style="z-index: 90; opacity: 0; transform: none;">
+	</ul>
+	<ul class="bookmarks-list" id="active-bookmarks-alt" style="z-index: 100; left: 0px; opacity: 1; transform: translateX(0px);"><li style="z-index: 21;"><span draggable="false" class="bookmark toggle-folder main-button " title="Most Visited">
+	
+
+	<!-- Folder icon -->
+	<svg draggable="false" class="bookmark-icon bookmark-icon-folder" xmlns="http://www.w3.org/2000/svg" width="510" height="510" viewBox="0 0 510 510"><path d="M204 51H51C22.95 51 0 73.95 0 102v306c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V153c0-28.05-22.95-51-51-51H255l-51-51z"></path></svg><!--
+
+	--><span class="bookmark-label">Most Visited</span>
+
+	<ul class="bookmarks-folder-list"></ul>
+</span>
+</li><li class="hidden" style=""><a draggable="false" href="chrome-search://local-ntp/local-ntp.html" title="Chrome Tab" class="bookmark  local"><img draggable="false" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-chrome.svg" class="bookmark-icon"><span class="bookmark-label">Chrome Tab</span></a>
+</li><li class="hidden" style=""><a draggable="false" href="chrome://apps/" title="Apps" class="bookmark  local"><img draggable="false" src="chrome://favicon/size/16@2x/chrome://apps" class="bookmark-icon"><span class="bookmark-label">Apps</span></a>
+</li><li class="hidden" style=""><a draggable="false" href="chrome://bookmarks/" title="Bookmarks" class="bookmark  local"><img draggable="false" src="chrome://favicon/size/16@2x/chrome://bookmarks" class="bookmark-icon"><span class="bookmark-label">Bookmarks</span></a>
+</li><li><a draggable="false" href="chrome://bookmarks/" title="Bookmarks" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/chrome://bookmarks/" class="bookmark-icon"><span class="bookmark-label">Bookmarks</span></a>
+</li><li><a draggable="false" href="https://www.udemy.com/modern-javascript-from-the-beginning/learn/v4/overview" title="Modern JavaScript From The Beginning | Udemy" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.udemy.com/modern-javascript-from-the-beginning/learn/v4/overview" class="bookmark-icon"><span class="bookmark-label">Modern JavaScript From The Beginning | Udemy</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=Z6lbHJg8sTU" title="Fox News LIVE - Fox News Live Stream Today 24/7 - CNN Live Donald Trump Breaking News Live - YouTube" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=Z6lbHJg8sTU" class="bookmark-icon"><span class="bookmark-label">Fox News LIVE - Fox News Live Stream Today 24/7 - CNN Live Donald Trump Breaking News Live - YouTube</span></a>
+</li><li><a draggable="false" href="https://www.tradingview.com/screener/" title="Stock Screener - search and filter stocks on TradingView" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.tradingview.com/screener/" class="bookmark-icon"><span class="bookmark-label">Stock Screener - search and filter stocks on TradingView</span></a>
+</li><li><a draggable="false" href="https://www.udemy.com/cart/success/124490830/" title="Online Courses - Anytime, Anywhere | Udemy" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.udemy.com/cart/success/124490830/" class="bookmark-icon"><span class="bookmark-label">Online Courses - Anytime, Anywhere | Udemy</span></a>
+</li><li><a draggable="false" href="https://www.tradingview.com/chart/GOLD/" title="GOLD — CFD trading GOLD (US$/OZ) GOLD online | TradingView" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.tradingview.com/chart/GOLD/" class="bookmark-icon"><span class="bookmark-label">GOLD — CFD trading GOLD (US$/OZ) GOLD online | TradingView</span></a>
+</li><li><a draggable="false" href="https://egov.uscis.gov/casestatus/mycasestatus.do" title="USCIS MSC1690288394" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://egov.uscis.gov/casestatus/mycasestatus.do" class="bookmark-icon"><span class="bookmark-label">USCIS MSC1690288394</span></a>
+</li><li><a draggable="false" href="https://invoice-generator.com/#/1/thanks/download" title="Free Invoice Generator by Invoiced" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://invoice-generator.com/#/1/thanks/download" class="bookmark-icon"><span class="bookmark-label">Free Invoice Generator by Invoiced</span></a>
+</li><li><a draggable="false" href="https://ef.emrconnect.org/portal/default.aspx" title="MyErieHealth.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://ef.emrconnect.org/portal/default.aspx" class="bookmark-icon"><span class="bookmark-label">MyErieHealth.com</span></a>
+</li><li><a draggable="false" href="http://www.iheart.com/" title="Broken Wings - Mr. Mister" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.iheart.com/" class="bookmark-icon"><span class="bookmark-label">Broken Wings - Mr. Mister</span></a>
+</li><li><a draggable="false" href="http://www.online-calculator.com/" title="Calculator" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.online-calculator.com/" class="bookmark-icon"><span class="bookmark-label">Calculator</span></a>
+</li><li><a draggable="false" href="http://www.canalntn24.com/envivo" title="SEÑAL EN VIVO NTN24 | NTN24" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.canalntn24.com/envivo" class="bookmark-icon"><span class="bookmark-label">SEÑAL EN VIVO NTN24 | NTN24</span></a>
+</li><li><a draggable="false" href="http://www.englisch-hilfen.de/en/grammar/phrasal_verbs.htm" title="Phrasal verbs, Prepositional verbs - English Grammar" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.englisch-hilfen.de/en/grammar/phrasal_verbs.htm" class="bookmark-icon"><span class="bookmark-label">Phrasal verbs, Prepositional verbs - English Grammar</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=ZHRuPXYHs_o" title="I Can Do It - Louise Hay : How to Use Affirmations to Change Your Life[Full Audio Book] - YouTube" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=ZHRuPXYHs_o" class="bookmark-icon"><span class="bookmark-label">I Can Do It - Louise Hay : How to Use Affirmations to Change Your Life[Full Audio Book] - YouTube</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=9Q8ueVQ0nuk" title="TU PUEDES SANAR TU VIDA louise l hay pelicula completa con audio en español - YouTube" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=9Q8ueVQ0nuk" class="bookmark-icon"><span class="bookmark-label">TU PUEDES SANAR TU VIDA louise l hay pelicula completa con audio en español - YouTube</span></a>
+</li><li><a draggable="false" href="http://www.amazon.com/Samsung-Galaxy-Unlocked-Android-Touchscreen/dp/B009PLBLQC/ref=pd_sim_cps_5" title="Amazon.com: Samsung Galaxy S III Mini I8190 8GB Blue Unlocked GSM Phone with Android 4.1 OS, Dual Core, Super AMOLED Touchscreen, 5M: Cell Phones &amp; Accessories" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.amazon.com/Samsung-Galaxy-Unlocked-Android-Touchscreen/dp/B009PLBLQC/ref=pd_sim_cps_5" class="bookmark-icon"><span class="bookmark-label">Amazon.com: Samsung Galaxy S III Mini I8190 8GB Blue Unlocked GSM Phone with Android 4.1 OS, Dual Core, Super AMOLED Touchscreen, 5M: Cell Phones &amp; Accessories</span></a>
+</li><li><a draggable="false" href="http://cobrosweb.cadafe.com.ve/EnLinea/consultadeuda.aspx?nic=1590512" title="consultadeuda cadafe" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://cobrosweb.cadafe.com.ve/EnLinea/consultadeuda.aspx?nic=1590512" class="bookmark-icon"><span class="bookmark-label">consultadeuda cadafe</span></a>
+</li><li><a draggable="false" href="http://mi.inter.com.ve/?src=homeweb" title="INTER" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://mi.inter.com.ve/?src=homeweb" class="bookmark-icon"><span class="bookmark-label">INTER</span></a>
+</li><li><a draggable="false" href="http://www.directvplay.com/ve/copamundialdelafifa/video?vh-video=1242963&amp;vh-asset=2&amp;vh-match=1&amp;toolbox_user_token=3c1647205486a97ff8bc8c0d943f5010745b6829" title="DIRECTV Play | Copa Mundial de la FIFA | Sitio Oficial" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.directvplay.com/ve/copamundialdelafifa/video?vh-video=1242963&amp;vh-asset=2&amp;vh-match=1&amp;toolbox_user_token=3c1647205486a97ff8bc8c0d943f5010745b6829" class="bookmark-icon"><span class="bookmark-label">DIRECTV Play | Copa Mundial de la FIFA | Sitio Oficial</span></a>
+</li><li><a draggable="false" href="http://deportes.terra.com.co/futbol/mundial-2014/tabla" title="Tabla de calendario, grupos y sedes del Mundial 2014 en Brasil" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://deportes.terra.com.co/futbol/mundial-2014/tabla" class="bookmark-icon"><span class="bookmark-label">Tabla de calendario, grupos y sedes del Mundial 2014 en Brasil</span></a>
+</li><li><a draggable="false" href="http://www.academiadoname.com.ve/Cont%C3%A1ctenos.php" title="www.academiadoname.com.ve/Contáctenos.php" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.academiadoname.com.ve/Cont%C3%A1ctenos.php" class="bookmark-icon"><span class="bookmark-label">www.academiadoname.com.ve/Contáctenos.php</span></a>
+</li><li><a draggable="false" href="http://www.tsj.gov.ve/servicios/amparo3.asp" title="Solicitud de Amparo - Tribunal Supremo de Justicia" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.tsj.gov.ve/servicios/amparo3.asp" class="bookmark-icon"><span class="bookmark-label">Solicitud de Amparo - Tribunal Supremo de Justicia</span></a>
+</li><li><a draggable="false" href="https://us-mg5.mail.yahoo.com/neo/launch?.rand=d8uo40j1nqinc#8092970800" title="johnnycvanderbilt - Yahoo Mail" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://us-mg5.mail.yahoo.com/neo/launch?.rand=d8uo40j1nqinc#8092970800" class="bookmark-icon"><span class="bookmark-label">johnnycvanderbilt - Yahoo Mail</span></a>
+</li><li><a draggable="false" href="https://es.myfamilymobile.com/Login/login.aspx?rc=&amp;dest=https%3a%2f%2fwww.myfamilymobile.com%3a443%2fDefault.aspx" title="Family Mobile » Servicio al cliente para teléfonos de Family Mobile | Asistencia de Family Mobile" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://es.myfamilymobile.com/Login/login.aspx?rc=&amp;dest=https%3a%2f%2fwww.myfamilymobile.com%3a443%2fDefault.aspx" class="bookmark-icon"><span class="bookmark-label">Family Mobile » Servicio al cliente para teléfonos de Family Mobile | Asistencia de Family Mobile</span></a>
+</li><li><a draggable="false" href="https://egov.uscis.gov/casestatus/mycasestatus.do;jsessionid=facwBkSF8LivUgxmFC9Nu" title="myUSCIS - Case Status WAC1590069198" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://egov.uscis.gov/casestatus/mycasestatus.do;jsessionid=facwBkSF8LivUgxmFC9Nu" class="bookmark-icon"><span class="bookmark-label">myUSCIS - Case Status WAC1590069198</span></a>
+</li><li><a draggable="false" href="http://www.tramitesconsulares.com/cont%C3%A1ctenos.html" title="Trámites Consulares - Contáctenos" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.tramitesconsulares.com/cont%C3%A1ctenos.html" class="bookmark-icon"><span class="bookmark-label">Trámites Consulares - Contáctenos</span></a>
+</li><li><a draggable="false" href="http://www.tvgratis.tv/" title="TVgratis.TV - Tu Portal Gratuito de Canales de Televisión Online por Internet - www.TVgratis.TV" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.tvgratis.tv/" class="bookmark-icon"><span class="bookmark-label">TVgratis.TV - Tu Portal Gratuito de Canales de Televisión Online por Internet - www.TVgratis.TV</span></a>
+</li><li><a draggable="false" href="http://www.rockwelltrading.com/day-trading/members/adventures/chapter-9/" title="Chapter 9 - Don&#39;t trade!" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.rockwelltrading.com/day-trading/members/adventures/chapter-9/" class="bookmark-icon"><span class="bookmark-label">Chapter 9 - Don't trade!</span></a>
+</li><li><a draggable="false" href="http://www.rockwelltrading.com/day-trading/members/adventures/chapter-1/" title="eBook &quot;Adventures Of A Day Trader&quot; - Chapter 1: Why Trading?" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.rockwelltrading.com/day-trading/members/adventures/chapter-1/" class="bookmark-icon"><span class="bookmark-label">eBook "Adventures Of A Day Trader" - Chapter 1: Why Trading?</span></a>
+</li><li><a draggable="false" href="http://www.pandora.com/station/play/2458676544621923192" title="Pandora Radio - Listen to Free Internet Radio, Find New Music" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.pandora.com/station/play/2458676544621923192" class="bookmark-icon"><span class="bookmark-label">Pandora Radio - Listen to Free Internet Radio, Find New Music</span></a>
+</li><li><a draggable="false" href="http://www.cookcountyclerkofcourt.org/?FAQSPage=3500&amp;Section=FAQSPage" title="Cook County Clerk of the Circuit Court" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.cookcountyclerkofcourt.org/?FAQSPage=3500&amp;Section=FAQSPage" class="bookmark-icon"><span class="bookmark-label">Cook County Clerk of the Circuit Court</span></a>
+</li><li><a draggable="false" href="http://portal.finsents.com/Preview/CompanyProfile?id=c_461&amp;ticker=M:US&amp;key=CP-stweet-545-1421507292-mGDgbnJ9wxxv9HuMKcONmamaBa%2f4kzbChbsFBFQAugE%3d#.VLp7BUfF-A0" title="Stocks live" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://portal.finsents.com/Preview/CompanyProfile?id=c_461&amp;ticker=M:US&amp;key=CP-stweet-545-1421507292-mGDgbnJ9wxxv9HuMKcONmamaBa%2f4kzbChbsFBFQAugE%3d#.VLp7BUfF-A0" class="bookmark-icon"><span class="bookmark-label">Stocks live</span></a>
+</li><li><a draggable="false" href="http://admissions.calbar.ca.gov/Education/LegalEducation/ForeignEducation.aspx" title="Foreign Education" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://admissions.calbar.ca.gov/Education/LegalEducation/ForeignEducation.aspx" class="bookmark-icon"><span class="bookmark-label">Foreign Education</span></a>
+</li><li><a draggable="false" href="http://sociedadvenezolana.ning.com/profiles/blogs/musica-triste-de-andres-mata?xg_source=activity" title="MÚSICA TRISTE, DE ANDRÉS MATA - SOCIEDAD VENEZOLANA DE ARTE INTERNACIONAL" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://sociedadvenezolana.ning.com/profiles/blogs/musica-triste-de-andres-mata?xg_source=activity" class="bookmark-icon"><span class="bookmark-label">MÚSICA TRISTE, DE ANDRÉS MATA - SOCIEDAD VENEZOLANA DE ARTE INTERNACIONAL</span></a>
+</li><li><a draggable="false" href="http://www.soyimagen.jenesseglobal.com/" title="jenesseglobal.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.soyimagen.jenesseglobal.com/" class="bookmark-icon"><span class="bookmark-label">jenesseglobal.com</span></a>
+</li><li><a draggable="false" href="http://www.immihelp.com/visitor-visa-extension/approval-delay-inquiry-sample-letter.html" title="Visitor Visa Extension - Approval Delay Sample Letter" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.immihelp.com/visitor-visa-extension/approval-delay-inquiry-sample-letter.html" class="bookmark-icon"><span class="bookmark-label">Visitor Visa Extension - Approval Delay Sample Letter</span></a>
+</li><li><a draggable="false" href="http://mastercarp.dyndns.ws:8008/drupal/node/143" title="Boilies al Natural | Club Carpfishing Mostachon" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://mastercarp.dyndns.ws:8008/drupal/node/143" class="bookmark-icon"><span class="bookmark-label">Boilies al Natural | Club Carpfishing Mostachon</span></a>
+</li><li><a draggable="false" href="https://www.google.co.ve/?gws_rd=cr&amp;ei=TC75UtH_LYW50AGp1YDYCg" title="Google" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.google.co.ve/?gws_rd=cr&amp;ei=TC75UtH_LYW50AGp1YDYCg" class="bookmark-icon"><span class="bookmark-label">Google</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=NgYnB5QVZto" title="Lanzador casero de boilies, tipo cobra. - YouTube" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=NgYnB5QVZto" class="bookmark-icon"><span class="bookmark-label">Lanzador casero de boilies, tipo cobra. - YouTube</span></a>
+</li><li><a draggable="false" href="https://law.fiu.edu/lawadmit/" title="Juris Doctor Program - Law" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://law.fiu.edu/lawadmit/" class="bookmark-icon"><span class="bookmark-label">Juris Doctor Program - Law</span></a>
+</li><li><a draggable="false" href="https://www.fpl.com/" title="FPL | Homepage" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.fpl.com/" class="bookmark-icon"><span class="bookmark-label">FPL | Homepage</span></a>
+</li><li><a draggable="false" href="http://www.venezuelaawareness.com/category/inmigracion-2/" title="Inmigración » Venezuela Awareness Foundation" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.venezuelaawareness.com/category/inmigracion-2/" class="bookmark-icon"><span class="bookmark-label">Inmigración » Venezuela Awareness Foundation</span></a>
+</li><li><a draggable="false" href="https://membership.tui.transunion.com/tucm/login.page?action=LOGOUT" title="Online Personal Credit Reports &amp; Credit Scores - TransUnion Credit Monitoring" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://membership.tui.transunion.com/tucm/login.page?action=LOGOUT" class="bookmark-icon"><span class="bookmark-label">Online Personal Credit Reports &amp; Credit Scores - TransUnion Credit Monitoring</span></a>
+</li><li><a draggable="false" href="http://informe21.com/salud-y-bienestar/6-gotas-al-dia-de-este-poderoso-aceite-eliminan-la-grasa-del-abdomen?utm_content=buffer7fea5&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" title="6 gotas al día de este poderoso aceite eliminan la grasa del abdomen | Informe21.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://informe21.com/salud-y-bienestar/6-gotas-al-dia-de-este-poderoso-aceite-eliminan-la-grasa-del-abdomen?utm_content=buffer7fea5&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" class="bookmark-icon"><span class="bookmark-label">6 gotas al día de este poderoso aceite eliminan la grasa del abdomen | Informe21.com</span></a>
+</li><li><a draggable="false" href="https://secure.rentalcars.com/ThanksCancel.do?booking.reference=594672676&amp;booking.contact.email=johnnycast%40gmail.com&amp;singular=false&amp;serverName=www.rentalcars.com&amp;affiliateCode=return&amp;cancelReasonDrop=5&amp;cancelReason=&amp;booking.reference=&amp;booking.contact.email=&amp;singular=false&amp;serverName=www.rentalcars.com" title="Rental Cars and Car Rentals from Rental Cars.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://secure.rentalcars.com/ThanksCancel.do?booking.reference=594672676&amp;booking.contact.email=johnnycast%40gmail.com&amp;singular=false&amp;serverName=www.rentalcars.com&amp;affiliateCode=return&amp;cancelReasonDrop=5&amp;cancelReason=&amp;booking.reference=&amp;booking.contact.email=&amp;singular=false&amp;serverName=www.rentalcars.com" class="bookmark-icon"><span class="bookmark-label">Rental Cars and Car Rentals from Rental Cars.com</span></a>
+</li><li style="z-index: 21;"><span draggable="false" class="bookmark toggle-folder main-button " title="HP">
+	
+
+	<!-- Folder icon -->
+	<svg draggable="false" class="bookmark-icon bookmark-icon-folder" xmlns="http://www.w3.org/2000/svg" width="510" height="510" viewBox="0 0 510 510"><path d="M204 51H51C22.95 51 0 73.95 0 102v306c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V153c0-28.05-22.95-51-51-51H255l-51-51z"></path></svg><!--
+
+	--><span class="bookmark-label">HP</span>
+
+	<ul class="bookmarks-folder-list"></ul>
+</span>
+</li><li><a draggable="false" href="http://www.happychefforestpark.com/" title="Happy Chef | Order Online | Forest Park, IL 60130 | Menu - Asian, Chinese, Lunch Specials - Online Food Delivery" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.happychefforestpark.com/" class="bookmark-icon"><span class="bookmark-label">Happy Chef | Order Online | Forest Park, IL 60130 | Menu - Asian, Chinese, Lunch Specials - Online Food Delivery</span></a>
+</li><li><a draggable="false" href="https://www.papajohns.com/" title="Papa John&#39;s Pizza | Order for Delivery or Carryout" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.papajohns.com/" class="bookmark-icon"><span class="bookmark-label">Papa John's Pizza | Order for Delivery or Carryout</span></a>
+</li><li><a draggable="false" href="http://onewaycargo.com.ve/one-way-id/" title="One Way Cargo - Envios USA-Venezuela" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://onewaycargo.com.ve/one-way-id/" class="bookmark-icon"><span class="bookmark-label">One Way Cargo - Envios USA-Venezuela</span></a>
+</li><li><a draggable="false" href="https://ef.emrconnect.org/portal/my-inbox/default.aspx" title="My Inbox / Mi Buzón" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://ef.emrconnect.org/portal/my-inbox/default.aspx" class="bookmark-icon"><span class="bookmark-label">My Inbox / Mi Buzón</span></a>
+</li><li><a draggable="false" href="https://wfa.kronostm.com/index.jsp?applicationName=CostcoNonReqExt&amp;locale=en_US" title="Your Application Has Been Submitted" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://wfa.kronostm.com/index.jsp?applicationName=CostcoNonReqExt&amp;locale=en_US" class="bookmark-icon"><span class="bookmark-label">Your Application Has Been Submitted</span></a>
+</li><li><a draggable="false" href="http://gawker.com/bernie-sanders-walks-out-of-on-camera-interview-after-q-1765769530" title="Bernie Sanders Walked Out of an On-Camera Interview Over a Question About His Wife" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://gawker.com/bernie-sanders-walks-out-of-on-camera-interview-after-q-1765769530" class="bookmark-icon"><span class="bookmark-label">Bernie Sanders Walked Out of an On-Camera Interview Over a Question About His Wife</span></a>
+</li><li><a draggable="false" href="https://www.getipass.com/ipass/LoginPin.jsp" title="Illinois Tollway" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.getipass.com/ipass/LoginPin.jsp" class="bookmark-icon"><span class="bookmark-label">Illinois Tollway</span></a>
+</li><li><a draggable="false" href="https://www.53.com/logout.html?atgCampaign=%2Fapps%2Fatg%2Fib%2Fdefault%2Flogoff%2Flogoff-default.html&amp;sessiontimeout=null&amp;logoutRewardsSession=false" title="Fifth Third Bank: Login" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.53.com/logout.html?atgCampaign=%2Fapps%2Fatg%2Fib%2Fdefault%2Flogoff%2Flogoff-default.html&amp;sessiontimeout=null&amp;logoutRewardsSession=false" class="bookmark-icon"><span class="bookmark-label">Fifth Third Bank: Login</span></a>
+</li><li><a draggable="false" href="https://directorioadventistavenezuela.wordpress.com/2011/04/21/instivoc/" title="INSTIVOC | Directorio Adventista de Venezuela" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://directorioadventistavenezuela.wordpress.com/2011/04/21/instivoc/" class="bookmark-icon"><span class="bookmark-label">INSTIVOC | Directorio Adventista de Venezuela</span></a>
+</li><li><a draggable="false" href="http://www.cityofchicago.org/city/en/depts/bacp/supp_info/bacppublicvehicles.html" title="City of Chicago :: Public Vehicles" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.cityofchicago.org/city/en/depts/bacp/supp_info/bacppublicvehicles.html" class="bookmark-icon"><span class="bookmark-label">City of Chicago :: Public Vehicles</span></a>
+</li><li><a draggable="false" href="https://parkingtickets.cityofchicago.org/CPSWeb/tickets/processEmail.do" title="City of Chicago" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://parkingtickets.cityofchicago.org/CPSWeb/tickets/processEmail.do" class="bookmark-icon"><span class="bookmark-label">City of Chicago</span></a>
+</li><li><a draggable="false" href="https://www.violationinfo.com/Chicago/Index.aspx" title="Pay Speed Ticket" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.violationinfo.com/Chicago/Index.aspx" class="bookmark-icon"><span class="bookmark-label">Pay Speed Ticket</span></a>
+</li><li><a draggable="false" href="https://secure.bankofamerica.com/myaccounts/sec-redirect/sasoDisplay.go" title="Thanks for choosing Bank of America. We look forward to serving you again soon." class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://secure.bankofamerica.com/myaccounts/sec-redirect/sasoDisplay.go" class="bookmark-icon"><span class="bookmark-label">Thanks for choosing Bank of America. We look forward to serving you again soon.</span></a>
+</li><li><a draggable="false" href="http://www.retoucherieamerica.com/" title="Retoucherie de Manuela | Arreglos y Transformaciones" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.retoucherieamerica.com/" class="bookmark-icon"><span class="bookmark-label">Retoucherie de Manuela | Arreglos y Transformaciones</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=z1gFMujtH-o" title="X" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=z1gFMujtH-o" class="bookmark-icon"><span class="bookmark-label">X</span></a>
+</li><li><a draggable="false" href="http://www.happydayschildcarecenter.org/home.html" title="Happy Days Child Development Center - Child Care Provider, Day Care, Quality Child Care" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.happydayschildcarecenter.org/home.html" class="bookmark-icon"><span class="bookmark-label">Happy Days Child Development Center - Child Care Provider, Day Care, Quality Child Care</span></a>
+</li><li><a draggable="false" href="https://www.incfile.com/form-order-now.php?entityType=LLC&amp;entityState=IL" title="llc filing" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.incfile.com/form-order-now.php?entityType=LLC&amp;entityState=IL" class="bookmark-icon"><span class="bookmark-label">llc filing</span></a>
+</li><li><a draggable="false" href="https://patient.labcorp.com/ui/guestInvoice" title="https://patient.labcorp.com/ui/guestInvoice" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://patient.labcorp.com/ui/guestInvoice" class="bookmark-icon"><span class="bookmark-label">https://patient.labcorp.com/ui/guestInvoice</span></a>
+</li><li><a draggable="false" href="https://patient.labcorp.com/ui/" title="https://patient.labcorp.com/ui/" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://patient.labcorp.com/ui/" class="bookmark-icon"><span class="bookmark-label">https://patient.labcorp.com/ui/</span></a>
+</li><li><a draggable="false" href="http://www.bancodevenezuela.com/?bdv=link_personas&amp;cod=735" title="Banco de Venezuela" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.bancodevenezuela.com/?bdv=link_personas&amp;cod=735" class="bookmark-icon"><span class="bookmark-label">Banco de Venezuela</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=6-IKmOqr5rE&amp;t=16s" title="RSI BEAST MODE!!! Swing Trading Strategy ( With Account Proof!) Tradingview.com - YouTube" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=6-IKmOqr5rE&amp;t=16s" class="bookmark-icon"><span class="bookmark-label">RSI BEAST MODE!!! Swing Trading Strategy ( With Account Proof!) Tradingview.com - YouTube</span></a>
+</li><li><a draggable="false" href="https://member.ambetterhealth.com/sso/login?service=https%3A%2F%2Fmember.ambetterhealth.com%2Fmarketplace%2Fj_spring_cas_security_check" title="Ambetter Health" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://member.ambetterhealth.com/sso/login?service=https%3A%2F%2Fmember.ambetterhealth.com%2Fmarketplace%2Fj_spring_cas_security_check" class="bookmark-icon"><span class="bookmark-label">Ambetter Health</span></a>
+</li><li><a draggable="false" href="https://docs.google.com/spreadsheets/d/1OCIXg5diGRlGGePsoueyD8PXwIN8_bA1-1pDYo_gzF8/edit#gid=0" title="www.smgedot.org Translation-Master List - Google Sheets" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://docs.google.com/spreadsheets/d/1OCIXg5diGRlGGePsoueyD8PXwIN8_bA1-1pDYo_gzF8/edit#gid=0" class="bookmark-icon"><span class="bookmark-label">www.smgedot.org Translation-Master List - Google Sheets</span></a>
+</li><li><a draggable="false" href="http://cnnespanol.cnn.com/radio/en-vivo/" title="Audio en vivo de CNN en Español | CNNEspañol.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://cnnespanol.cnn.com/radio/en-vivo/" class="bookmark-icon"><span class="bookmark-label">Audio en vivo de CNN en Español | CNNEspañol.com</span></a>
+</li><li><a draggable="false" href="https://www.atanet.org/certification/certification_FAQ.php" title="ATA Certification Program: Frequently Asked Questions" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.atanet.org/certification/certification_FAQ.php" class="bookmark-icon"><span class="bookmark-label">ATA Certification Program: Frequently Asked Questions</span></a>
+</li><li><a draggable="false" href="https://digitalcrafts.skills.fund/" title="DigitalCrafts&#39; Financing Partner - DigitalCrafts&#39; Financing Partner" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://digitalcrafts.skills.fund/" class="bookmark-icon"><span class="bookmark-label">DigitalCrafts' Financing Partner - DigitalCrafts' Financing Partner</span></a>
+</li><li><a draggable="false" href="http://www.digitalcrafts.com/full-stack-flex.html" title="Full Stack Flex Program: Part-time Coding Bootcamp for Working Professionals" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.digitalcrafts.com/full-stack-flex.html" class="bookmark-icon"><span class="bookmark-label">Full Stack Flex Program: Part-time Coding Bootcamp for Working Professionals</span></a>
+</li><li><a draggable="false" href="https://www.codecademy.com/learn/all" title="All Courses | Learn to code interactively | Codecademy" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.codecademy.com/learn/all" class="bookmark-icon"><span class="bookmark-label">All Courses | Learn to code interactively | Codecademy</span></a>
+</li><li><a draggable="false" href="https://www.w3schools.com/tags/default.asp" title="HTML Reference" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.w3schools.com/tags/default.asp" class="bookmark-icon"><span class="bookmark-label">HTML Reference</span></a>
+</li><li><a draggable="false" href="https://www.themuse.com/jobs/uber/uber-expert-inperson-support-denver-8adeab#" title="Uber Expert, In-Person Support - Denver | Denver, CO" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.themuse.com/jobs/uber/uber-expert-inperson-support-denver-8adeab#" class="bookmark-icon"><span class="bookmark-label">Uber Expert, In-Person Support - Denver | Denver, CO</span></a>
+</li><li><a draggable="false" href="https://www.impressivewebs.com/css-readability/" title="Give Your CSS Some Room to Breathe" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.impressivewebs.com/css-readability/" class="bookmark-icon"><span class="bookmark-label">Give Your CSS Some Room to Breathe</span></a>
+</li><li><a draggable="false" href="http://www.1keydata.com/css-tutorial/" title="CSS Tutorial - Learn CSS Codes and Layouts - 1Keydata" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.1keydata.com/css-tutorial/" class="bookmark-icon"><span class="bookmark-label">CSS Tutorial - Learn CSS Codes and Layouts - 1Keydata</span></a>
+</li><li><a draggable="false" href="https://www.w3.org/community/webed/wiki/What_can_you_do_with_JavaScript" title="What can you do with JavaScript - Web Education Community Group" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.w3.org/community/webed/wiki/What_can_you_do_with_JavaScript" class="bookmark-icon"><span class="bookmark-label">What can you do with JavaScript - Web Education Community Group</span></a>
+</li><li><a draggable="false" href="https://www.interactivebrokers.com/en/general/education/videos/bracket-orders-TWS-mosaic.php" title="Bracket Orders for TWS Mosaic | Interactive Brokers" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.interactivebrokers.com/en/general/education/videos/bracket-orders-TWS-mosaic.php" class="bookmark-icon"><span class="bookmark-label">Bracket Orders for TWS Mosaic | Interactive Brokers</span></a>
+</li><li><a draggable="false" href="https://smile.amazon.com/ch/36-4211306" title="AmazonSmile: You shop. Amazon gives." class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://smile.amazon.com/ch/36-4211306" class="bookmark-icon"><span class="bookmark-label">AmazonSmile: You shop. Amazon gives.</span></a>
+</li><li><a draggable="false" href="https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369" title="How does Ethereum work, anyway? – Preethi Kasireddy – Medium" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369" class="bookmark-icon"><span class="bookmark-label">How does Ethereum work, anyway? – Preethi Kasireddy – Medium</span></a>
+</li><li><a draggable="false" href="https://ethermine.org/" title="Home - ethermine.org - The fastest way to mine Ether" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://ethermine.org/" class="bookmark-icon"><span class="bookmark-label">Home - ethermine.org - The fastest way to mine Ether</span></a>
+</li><li><a draggable="false" href="https://www.myetherwallet.com/#view-wallet-info" title="MyEtherWallet.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.myetherwallet.com/#view-wallet-info" class="bookmark-icon"><span class="bookmark-label">MyEtherWallet.com</span></a>
+</li><li><a draggable="false" href="https://etherchain.org/account/0x406e272128d30A04c549a8D9E61853e86cc285b7" title="Accounts - etherchain.org - The ethereum blockchain explorer" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://etherchain.org/account/0x406e272128d30A04c549a8D9E61853e86cc285b7" class="bookmark-icon"><span class="bookmark-label">Accounts - etherchain.org - The ethereum blockchain explorer</span></a>
+</li><li><a draggable="false" href="https://ethermine.org/miners/406e272128d30A04c549a8D9E61853e86cc285b7" title="Balances - ethermine.org - The fastest way to mine Ether" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://ethermine.org/miners/406e272128d30A04c549a8D9E61853e86cc285b7" class="bookmark-icon"><span class="bookmark-label">Balances - ethermine.org - The fastest way to mine Ether</span></a>
+</li><li><a draggable="false" href="https://www.yola.com/blog/determining-the-goal-of-your-business-website/" title="Determining the goal of your business website | Yola" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.yola.com/blog/determining-the-goal-of-your-business-website/" class="bookmark-icon"><span class="bookmark-label">Determining the goal of your business website | Yola</span></a>
+</li><li><a draggable="false" href="https://invoice-generator.com/#/2" title="Free Invoice Generator by Invoiced" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://invoice-generator.com/#/2" class="bookmark-icon"><span class="bookmark-label">Free Invoice Generator by Invoiced</span></a>
+</li><li><a draggable="false" href="http://www.wtamu.edu/academic/anns/mps/math/mathlab/beg_algebra/beg_alg_tut3_fractions.htm" title="www.wtamu.edu/academic/anns/mps/math/mathlab/beg_algebra/beg_alg_tut3_fractions.htm" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://www.wtamu.edu/academic/anns/mps/math/mathlab/beg_algebra/beg_alg_tut3_fractions.htm" class="bookmark-icon"><span class="bookmark-label">www.wtamu.edu/academic/anns/mps/math/mathlab/beg_algebra/beg_alg_tut3_fractions.htm</span></a>
+</li><li><a draggable="false" href="https://www.testdome.com/tests/html-css-javascript-online-test/16" title="HTML/CSS and JavaScript online test | TestDome.com" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.testdome.com/tests/html-css-javascript-online-test/16" class="bookmark-icon"><span class="bookmark-label">HTML/CSS and JavaScript online test | TestDome.com</span></a>
+</li><li><a draggable="false" href="https://www.youtube.com/watch?v=I1Ra9OSQJzA" title="(2) Tillerson delivers a statement - YouTube" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://www.youtube.com/watch?v=I1Ra9OSQJzA" class="bookmark-icon"><span class="bookmark-label">(2) Tillerson delivers a statement - YouTube</span></a>
+</li><li><a draggable="false" href="https://issuu.com/varlenoyahoo.com.brvarlenoyahoo.com/docs/javascriptforkids-tutorial" title="Javascriptforkids tutorial by varleno@yahoo.com.br varleno@yahoo.com.br - issuu" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/https://issuu.com/varlenoyahoo.com.brvarlenoyahoo.com/docs/javascriptforkids-tutorial" class="bookmark-icon"><span class="bookmark-label">Javascriptforkids tutorial by varleno@yahoo.com.br varleno@yahoo.com.br - issuu</span></a>
+</li><li><a draggable="false" href="http://paletton.com/#uid=51B050k2wwv9wqX6Mt43CqA49nN" title="Paletton - The Color Scheme Designer" class="bookmark  "><img draggable="false" src="chrome://favicon/size/16@2x/http://paletton.com/#uid=51B050k2wwv9wqX6Mt43CqA49nN" class="bookmark-icon"><span class="bookmark-label">Paletton - The Color Scheme Designer</span></a>
+</li><li class="hidden" style="z-index: 21;"><span draggable="false" class="bookmark toggle-folder main-button " title="Other">
+	
+
+	<!-- Folder icon -->
+	<svg draggable="false" class="bookmark-icon bookmark-icon-folder" xmlns="http://www.w3.org/2000/svg" width="510" height="510" viewBox="0 0 510 510"><path d="M204 51H51C22.95 51 0 73.95 0 102v306c0 28.05 22.95 51 51 51h408c28.05 0 51-22.95 51-51V153c0-28.05-22.95-51-51-51H255l-51-51z"></path></svg><!--
+
+	--><span class="bookmark-label">Other</span>
+
+	<ul class="bookmarks-folder-list"></ul>
+</span>
+</li></ul>
+	<div class="bookmarks-guide">
+		<div class="bookmarks-guide-wrapper"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-pointer.svg" class="bookmarks-guide-icon"> Drag for more bookmarks</div>
+	</div>
+</div>
+</div></div>
+<div class="top-row">
+<div id="top-left" class="top-left"><div id="quicklinks" class="quicklinks top-widget" style="opacity: 1;"><span class="quicklinks-show top-nav toggle" href="">Links</span>
+
+<div class="pane-container quicklinks-wrapper nipple-top-left">
+	<div class="pane quicklinks-pane">
+		<div class="message connection-message" style="display: block;"><i class="loading-icon"></i>Loading...</div>
+
+		<ol>
+			<li data-momo-id="chromeTab" data-place="links" class="optional-link"><a href="chrome-search://local-ntp/local-ntp.html" class="local"><svg class="icon-svg icon-chrome-tab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497.401 497.401"><g><path d="M478.742 154.382H320.714c28.366 21.765 47.111 55.717 47.111 94.307 0 30.63-14.345 56.386-30.933 79.445-28.322 39.41-95.817 168.878-95.817 168.878 2.567.043 5.026.388 7.636.388 137.341 0 248.69-111.348 248.69-248.69-.022-33.412-6.709-65.229-18.659-94.328z"></path><path d="M248.172 129.619c54.402-.388 217.628-2.049 217.628-2.049C423.24 51.511 342.069 0 248.69 0 170.819 0 101.361 35.829 55.782 91.848l75.972 134.925c10.268-55.113 58.349-96.744 116.418-97.154z"></path><path d="M248.668 367.825c-51.964 0-91.568-35.117-111.974-79.855-20.535-45.018-98.061-171.984-98.061-171.984C14.301 154.425 0 199.832 0 248.69c0 124.744 91.935 227.744 211.696 245.648l77.288-134.019c-12.641 4.615-26.101 7.506-40.316 7.506z"></path><circle cx="248.668" cy="248.711" r="80.416"></circle></g></svg> Chrome Tab</a></li>
+			<li data-momo-id="apps" class="optional-link" data-place="links"><a href="chrome://apps/" id="app-return" class="local"><svg class="icon-svg icon-apps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M3 3h6v6H3V3zm10 0h6v6h-6V3zm10 0h6v6h-6V3zM3 13h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6zM3 23h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6z"></path></svg> Apps</a></li>
+		</ol>
+
+		<div class="empty links-empty">
+			<p class="links-empty-title">No links yet</p>
+			<p class="links-empty-description">Add your favorite links</p>
+		</div>
+		<div class="quicklinks-new">
+			<span class="hide quicklinks-new-hide">✕</span>
+			<input type="text" id="quicklinks-new-title" class="quicklinks-new-title quicklinks-new-toggle" placeholder="New Link">
+			<input type="text" id="quicklinks-new-url" class="quicklinks-new-url" placeholder="URL">
+		</div>
+		<div class="add-error-message message">Connection required to add link. <span class="message-action retry-add">Retry</span></div>
+	</div>
+</div>
+</div><div id="dashlinks" class="quicklinks dashlinks top-widget" style="opacity: 1;"><span data-momo-id="chromeTab" data-place="dash" data-url="chrome-search://local-ntp/local-ntp.html" class="optional-link toggle toggle-icon toggle-chrome-tab" title="Chrome Tab"><svg class="icon-svg icon-chrome-tab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497.401 497.401"><g><path d="M478.742 154.382H320.714c28.366 21.765 47.111 55.717 47.111 94.307 0 30.63-14.345 56.386-30.933 79.445-28.322 39.41-95.817 168.878-95.817 168.878 2.567.043 5.026.388 7.636.388 137.341 0 248.69-111.348 248.69-248.69-.022-33.412-6.709-65.229-18.659-94.328z"></path><path d="M248.172 129.619c54.402-.388 217.628-2.049 217.628-2.049C423.24 51.511 342.069 0 248.69 0 170.819 0 101.361 35.829 55.782 91.848l75.972 134.925c10.268-55.113 58.349-96.744 116.418-97.154z"></path><path d="M248.668 367.825c-51.964 0-91.568-35.117-111.974-79.855-20.535-45.018-98.061-171.984-98.061-171.984C14.301 154.425 0 199.832 0 248.69c0 124.744 91.935 227.744 211.696 245.648l77.288-134.019c-12.641 4.615-26.101 7.506-40.316 7.506z"></path><circle cx="248.668" cy="248.711" r="80.416"></circle></g></svg></span><!--
+--><span data-momo-id="apps" data-place="dash" data-url="chrome://apps" class="optional-link toggle toggle-icon toggle-apps" title="Apps"><svg class="icon-svg icon-apps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M3 3h6v6H3V3zm10 0h6v6h-6V3zm10 0h6v6h-6V3zM3 13h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6zM3 23h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6z"></path></svg></span>
+</div><div id="search" class="search top-widget" style="opacity: 1;"><form class="search-form"><span class="search-underline"></span><i class="icon-search"></i><input type="text" id="search-input" class="search-input" autocomplete="off"></form><iframe src="./New Tab_files/saved_resource.html" class="search-results"></iframe></div></div>
+<div id="top-right" class="top-right"><div id="weather" class="metric weather" style="opacity: 1;"><!-- Metric -->
+<div class="weather-toggle" title="Mostly Cloudy">
+	<div class="metric-stat">
+			<span class="icon icon-weather" data-icon="H" title="Mostly Cloudy"></span><span class="metric-stat-number">76</span><span class="weather-degree">°</span><span class="unit hide">f</span>
+	</div>
+	<span class="location metric-label data" title="">Boulder</span>
+	<span class="metric-message"></span>
+</div>
+
+
+<div class="pane weather-pane widget-pop nipple-top-right">
+
+	<!-- Main weather area -->
+	<section class="weather-current">
+
+		<!-- Header -->
+		<header class="weather-current-header">
+
+			<span class="weather-current-location " title="">
+				<span class="weather-location-name">Boulder</span>
+				<i class="loading-icon"></i>
+
+				<span class="weather-location-icon weather-location-edit"><i class="icon-edit"></i></span>
+				<span class="weather-location-icon weather-location-reset" title="Use location"><svg class="weather-location-reset-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.636 51.636"><path d="M51.353.914a.999.999 0 0 0-1.135-.213L.583 23.481a1 1 0 0 0 .252 1.895l22.263 3.731 2.545 21.038a1.002 1.002 0 0 0 1.889.324l24-48.415a1 1 0 0 0-.179-1.14z"></path></svg></span>
+
+				<span class="weather-current-conditions">Mostly Cloudy</span>
+			</span>
+			<!-- Popup -->
+			<div class="pane-settings weather-settings">
+				<div class="pane-settings-icon-wrapper"><i class="icon-ellipsis pane-settings-icon"></i></div>
+				<div class="dropdown pane-settings-dropdown">
+					<ul class="dropdown-list">
+						<li class="toggle-hourly">
+							Hourly forecast
+							<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+						</li>
+						<li class="toggle-details">
+							Extra weather info
+							<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+						</li>
+						<li class="line"></li>
+						<li class="toggle-metric">
+							Metric units
+							<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+						</li>
+						<li class="weather-location-edit-menu">Edit location</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="weather-current-temp-row">
+			<!-- Main temp -->
+			<div class="weather-current-temp-wrapper toggle-hourly">
+				
+				<span class="icon icon-weather weather-current-icon" data-icon="H" title="Mostly Cloudy"></span><span class="weather-current-temp">76°</span>
+			</div>
+
+			<!-- Main details -->
+		</div>
+
+
+		<!-- Extra weather info -->
+	</section>
+
+
+	<!-- 5-day advance forecast -->
+	<section class="weather-forecast weather-forecast-daily active">
+		<div class="weather-forecast-item weather-forecast-day" data-day="Saturday" title="Scattered Showers">
+			<div class="weather-forecast-label">Sat</div>
+			<span class="icon icon-weather weather-forecast-icon" data-icon="Q"></span>
+			<span class="weather-forecast-high">75°</span><span class="weather-forecast-low">46°</span>
+		</div>
+		<div class="weather-forecast-item weather-forecast-day" data-day="Sunday" title="Mostly Cloudy">
+			<div class="weather-forecast-label">Sun</div>
+			<span class="icon icon-weather weather-forecast-icon" data-icon="H"></span>
+			<span class="weather-forecast-high">75°</span><span class="weather-forecast-low">49°</span>
+		</div>
+		<div class="weather-forecast-item weather-forecast-day" data-day="Monday" title="Scattered Thunderstorms">
+			<div class="weather-forecast-label">Mon</div>
+			<span class="icon icon-weather weather-forecast-icon" data-icon="O"></span>
+			<span class="weather-forecast-high">65°</span><span class="weather-forecast-low">50°</span>
+		</div>
+		<div class="weather-forecast-item weather-forecast-day" data-day="Tuesday" title="Scattered Thunderstorms">
+			<div class="weather-forecast-label">Tue</div>
+			<span class="icon icon-weather weather-forecast-icon" data-icon="O"></span>
+			<span class="weather-forecast-high">56°</span><span class="weather-forecast-low">41°</span>
+		</div>
+		<div class="weather-forecast-item weather-forecast-day" data-day="Wednesday" title="Scattered Thunderstorms">
+			<div class="weather-forecast-label">Wed</div>
+			<span class="icon icon-weather weather-forecast-icon" data-icon="O"></span>
+			<span class="weather-forecast-high">55°</span><span class="weather-forecast-low">45°</span>
+		</div>
+	</section>
+</div>
+</div></div>
+</div>
+<div id="center-above"></div>
+<div id="center"><div id="centerclock" style="opacity: 1;"><div class="clock default-clock"><h1 class="time"><span class="clock-one">1</span>0:55</h1>
+<span class="format">PM</span></div></div><div id="greeting" class="transition" style="opacity: 1;"><h2>Good <span class="period">evening</span>, <span class="name" spellcheck="false">Johnny</span>.</h2></div></div>
+<div id="center-below"><div id="focuses" style="opacity: 1;"><div class="prompt" style="display: block;"><h3>What is your main focus for today?</h3>
+<input type="text"></div><ol></ol>
+<div class="message focus-message">
+    <i class="loading-icon"></i>Loading...
+</div>
+</div></div>
+<div id="bottom"><blockquote class="quote" id="shortquote" style="opacity: 1;"><p class="quote-body">
+	<span class="quote-body-text">“The best time to plant a tree was 20 years ago. The second best time is now.”</span><i class="icon-angle-right"></i>
+	<span class="quote-source"><span class="quote-source-text">Chinese Proverb</span><span class="control control-heart"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart-empty.svg" class="icon icon-heart-empty"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart.svg" class="icon icon-heart"></span><span class="control control-refresh" style="display: none;"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-refresh.svg" class="icon icon-refresh"></span><span data-url="https://twitter.com/intent/tweet?text=%22The+best+time+to+plant+a+tree+was+20+years+ago.+The+second+best+time+is+now.%22+%E2%80%94Chinese+Proverb&amp;via=momentumdash&amp;related=momentumdash,levibucsis,jaywaterman" class="control control-twitter"><i class="icon icon-twitter"></i></span></span>
+</p></blockquote></div>
+<div id="bottom-right" class="bottom-right"><div id="todo" class="widget-bottom-right todo todo-Momentum Todo" style="max-height: 634px; opacity: 1;"><div class="pane-container todo-pane-container nipple-bottom-right">
+	<div class="pane todo-pane">
+		<div class="drop-zone drop-left-zone">
+			<span class="u--bg bar left-bar">
+				<span class="bar-name"></span>
+			</span>
+		</div>
+		<div class="drop-zone drop-right-zone">
+			<span class="u--bg bar right-bar">
+				<span class="bar-name"></span>
+			</span>
+		</div>
+		<div class="todo-header">
+			<ul class="todo-list-chooser todo-list-active main-list-active has-assignee momentum-todo"><li class="">
+	<div class="todo-list-color" style="background-color: rgba(0,0,0,0)">&nbsp;</div>
+
+	
+
+	<div class="todo-list-name-wrapper"><!--
+		--><span class="todo-list-name " title="Today">Today</span><!--
+		--><i class="icon icon-angle-down"></i><!--
+	--></div><!--
+
+	--><div class="todo-actions">
+		<div class="dropdown-container" id="todo-top-menu">	<!-- Do we need the header class below? -->
+	<i class="control-dropdown icon icon-ellipsis todo-actions-toggle"></i>
+<div class="dropdown todo-actions-dropdown">
+	<ul class="dropdown-list"></ul>
+	<ul class="dropdown-detail"></ul>
+</div>
+</div>
+	</div>
+</li>
+
+
+</ul>
+
+			<ul class="todo-list-chooser todo-list-chooser-dropdown main-list-chooser" style="display: none">
+<li class="todo-list-choice " data-list-id="1-inbox">
+	<div class="todo-list-color" style="background-color: ">&nbsp;</div>
+	<span class="todo-list-name">Inbox</span>
+	<span class="todo-count">0</span>
+</li>
+
+<li class="todo-list-choice-active " data-list-id="1-today">
+	<div class="todo-list-color" style="background-color: ">&nbsp;</div>
+	<span class="todo-list-name">Today</span>
+	<span class="todo-count">0</span>
+</li>
+
+<li class="todo-list-choice " data-list-id="1-done">
+	<div class="todo-list-color" style="background-color: ">&nbsp;</div>
+	<span class="todo-list-name">Done</span>
+	<span class="todo-count"></span>
+</li>
+<li class="todo-list-add-row"><div id="add-label" class="todo-list-add-button"><i class="icon icon-plus"></i> Add List</div>
+<input id="list-new" class="todo-input todo-list-add-input" type="text" placeholder="New List" style="display: none;">
+<span class="loading new-list-loading" style="display: none;"><i class="loading-icon"></i> <span>Loading...</span></span>
+</li></ul>
+
+		</div>
+		<div class="todo-list-wrapper">
+			<ol class="todo-list" style="max-height: 606px; min-height: 82px; opacity: 1;"></ol>
+		<span class="overlay loading todo-loading"><i class="loading-icon"></i> Loading...</span></div>
+		<input id="todo-new" class="todo-input todo-new" type="text" placeholder="New Todo">
+	</div>
+</div>
+<span class="toggle todo-toggle">Todo</span>
+</div></div>
+<div id="bottom-left" class="bottom-left"><div id="preferences" class="preferences"><span class="toggle"><svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274"><path d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z" fill="#FFF"></path></svg></span><div id="settings-main" class="pane-container settings-container"></div></div><div id="background-info" class="background-info" style="opacity: 1;"><span class="background-info-title">Kirkjufell, Iceland<i class="icon-angle-right"></i></span>
+<span class="background-info-source">
+    <span class="background-info-source-link" data-url="https://unsplash.com/photos/i8CXB6pGg3E">Photo by Jonatan Pie / Unsplash</span><span class="control control-heart"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart-empty.svg" class="icon icon-heart-empty"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart.svg" class="icon icon-heart"></span><span class="control control-refresh" title="Next Background" style="display: none;"><img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-refresh.svg" class="icon icon-refresh"></span>
+</span>
+</div></div>
+</div>
+<div class="overlay drop-overlay">
+<p>Drop to upload backgrounds <span class="badge plus-badge">PLUS</span></p>
+</div>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/js/lib.min.js"></script>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/app.min.js"></script>
+
+
+</body></html>

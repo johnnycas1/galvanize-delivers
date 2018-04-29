@@ -23,6 +23,11 @@ font-size: 20px;
   text-align: left;
 }
 
+a {
+  color: white;
+  
+}
+
 #footer_links{
   color: white;
 }
@@ -32,5 +37,11 @@ font-size: 20px;
   background-color: #1e4496;
   text-align: left;
   color: #a0a7bc;
+
+ }
+ .button {
+   color: #ff4081;
+   background-color: white;
+   text-decoration: none;
 
  }
