@@ -1,17 +1,26 @@
-.jumbotron{
+
+.jumbotron-fluid {
   background-image: url("img/hero.jpg");
   background-size: cover;
-  height: 450px;
-  border: none;
+  height: 370px;
+  border-radius: 0rem;
+
 }
+
 
 #place_an_order_button_cover{
  background-color: #ff4081;
- border: transparent;
+
+}
+
+#titles {
+font-size: 20px;
+ color: #ff4081;
 }
 
 #navbar, #bottom_row{
-  background-color: #0277bd;
+  background-color: #196cd1;
+  text-align: left;
 }
 
 #footer_links{
@@ -19,8 +28,9 @@
 }
 
 #footer{
-  background-color: #3f51b5;
+  font-size: 13px;
+  background-color: #1e4496;
+  text-align: left;
+  color: #a0a7bc;
 
  }
-
- 
