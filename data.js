@@ -63,12 +63,12 @@ function removeItemFromCartAll(name) {   // removes all items from the cart
 }
 
 // tests
-addItemToCart('apple',1.99,1);
-addItemToCart(' Pie',5.99,1);
-addItemToCart('Arugula Pie',8.99,1);
-addItemToCart('shoe',5.99,1);
-addItemToCart('Arugula Pie',7.99,3);
-addItemToCart('banana',8.99,1);
+// addItemToCart('apple',1.99,1);
+// addItemToCart(' Pie',5.99,1);
+// addItemToCart('Arugula Pie',8.99,1);
+// addItemToCart('shoe',5.99,1);
+// addItemToCart('Arugula Pie',7.99,3);
+// addItemToCart('banana',8.99,1);
 
 console.log(cart.length);
 console.log(cart);
@@ -113,20 +113,24 @@ function listCart() {  //-> array of Items
 }
 
 
-//******************************
-var array = listCart();
-array[0].name = 'mistake';
-console.log(array);
+// //******************************
+// var array = listCart();
+// array[0].name = 'mistake';
+// console.log(array);
 
 function saveCart() {   //--> use local storage
  localStorage.setItem("shoppingCart", JSON.stringify(cart));
 }
 
 
-// loadCart() -> retrieve the cart from loal storage
+function loadCart() {//-> retrieve the cart from loal storage
+cart = JSON.parse(localStorage.getItem("shoppingCart"));
+}
 
+loadCart();
 
-
+var array = listCart();
+console.log(array);
 
 // var a = new Item(); // {name: "", price: 0.0, count: 0}
 // // cart.push(new Item('Arugula Pie',8.99,1));
