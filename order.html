@@ -1,184 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="style.css" rel="stylesheet">
-    <link href="index.html" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link href="css/materialize.css" rel="stylesheet">
+  <link href="css/materialize.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="js/materialize.js"></script>
+  <script src="main.js"></script>
+  <link href="index.html" rel="stylesheet">
+  <title>Galvanize Delivers</title>
+</head>
 
-    <title>Galvanize Delivers</title>
-  </head>
-  <body>
-    <!-- Image and text -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-blue" id="navbar">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="navbar">
-        <span class="navbar-toggler-icon" id="navbar"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01" id="navbar">
-        <a class="navbar-brand text-white" href="index.html" target="_blank" id="navbar">Galvanize Delivers</a>
-      </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-blue" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="navbar">
+      <span class="navbar-toggler-icon" id="navbar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01" id="navbar">
+      <a class="navbar-brand text-white" href="order.html" target="_blank" id="navbar">Galvanize Delivers</a>
+    </div>
 <ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link active text-white" href="order.html" id="navbar" target="_blank">Order Delivery</a>
-  </li>
+<li class="nav-item">
+  <a class="nav-link active text-white" href="order.html" target="_blank" id="navbar">Order Delivery</a>
+</li>
 </ul>
-      <!-- <div>
-        <a class="nav-link text-center" href="#">Order Delivery </a>
-      </div> -->
-    </nav>
-    <div class="container">
-       <div class="row">
-         <div class="col-lg-2 col-md-6 ml-3 mt-3 mb-4">
-           <h3>Menu</h3>
-             </div>
-               <div class="col-lg-3 col-md-6 ml-5 mt-3 mb-4">
-                <h3></h3>
-                </div>
-              <div class="col-lg-3 col-md-6 ml-4 mt-3 mb-4">
-            <h3></h3>
-         </div>
-       </div>
+    <!-- <div>
+      <a class="nav-link text-center" href="#">Order Delivery </a>
+    </div> -->
+  </nav>
 
+  <!-- Need to add 2 columns. Menu with 4 cards. Order column with items and prices.
+  Plus order form. -->
+  <div class="container">
+    <div class="row">
 
-
-             <div class="row">
-               <div class="col-lg-6 col-md-6 mb-4">
-                 <div class="card h-100">
-                   <a href="#"><img class="card-img-top" src="img/burger.jpg" alt=""></a>
-                   <div class="card-body">
-                     <h4 class="card-title">
-                       <a id="a1">Royal with Cheese</a>
-                     </h4>
-                     <h5>$8.99</h5>
-                      </div>
-                   <div class="card-footer">
-                     <button id="royal" class="button">ADD TO ORDER</button>
-                   </div>
-                 </div>
-               </div>
-
-               <div class="col-lg-6 col-md-6 mb-4">
-                 <div class="card h-100">
-                   <a href="#"><img class="card-img-top" src="img/pizza.jpg" alt=""></a>
-                   <div class="card-body">
-                     <h4 class="card-title">
-                       <a id="a2">Aragula Pie</a>
-                     </h4>
-                     <h5>$11.99</h5>
-                     </div>
-                   <div class="card-footer">
-                      <button id="aragula"class="button">ADD TO ORDER</button>
-                   </div>
-                 </div>
-               </div>
-                   <div class="col-lg-6 col-md-6 mb-4">
-                     <div class="card h-100">
-                       <a href="#"><img class="card-img-top" src="img/ribs.jpg" alt=""></a>
-                       <div class="card-body">
-                         <h4 class="card-title">
-                           <a id="a3">Smoke Swine</a>
-                         </h4>
-                         <h5>$14.99</h5>
-                          </div>
-                       <div class="card-footer">
-                          <button id="smoke"class="button">ADD TO ORDER</button>
-                       </div>
-                     </div>
-                   </div>
-
-                   <div class="col-lg-6 col-md-6 mb-4">
-                     <div class="card h-100">
-                       <a href="#"><img class="card-img-top" src="img/ice_cream.jpg" alt=""></a>
-                       <div class="card-body">
-                         <h4 class="card-title">
-                           <a id="a4">Ice Cream Biscuit</a>
-                         </h4>
-                         <h5>$7.99</h5>
-                         </div>
-                       <div class="card-footer">
-                          <button id="ice"class="button">ADD TO ORDER</button>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-
-            </div>
-            <div class="container-fluid col-lg-9 col-md-6 mb-4">
-              <table class="table table-striped">
-  <thead>
-    <h2>Order</h2>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-    <!-- <div class="container"> -->
-      <div class="row align-items-start text-white" id="bottom_row">
-        <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-2 ml-5 pl-3 pr-3 pt-1 pb-1">
-          <h5>Galvanize Delivers</h5>
-
-           <p>Fine Dining, Delivered.</p>
-
-        </div>
-        <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-1">
-          <h2></h2>
-
-          <p> </p>
-        </div>
-        <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-1">
-          <p></p>
-          <a class="text-white" href="index.html" target="_blank">Home<a>
+    <!-- CARDS -->
+    <div class="col m8 s12">
+      <div class="col s12">
+        <h4>Menu</h4>
+      </div>
+      <!-- CARD 1 -->
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="img/burger.jpg" alt="burger" width="305" height="200">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Royale with Cheese</span>
+            <p class="price">$8.99</p>
+          </div>
+          <div class="card-action">
+            <a id="burger" href="#">ADD TO ORDER</a>
+          </div>
         </div>
       </div>
-
-    <!-- </div> -->
-
-
-      <div class="row pl-2" id="footer">
-          <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-2">
-            <footer> @ 2016 Galvanize Delivers</footer>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="img/pizza.jpg" alt="pizza" width="305" height="200">
           </div>
+          <div class="card-content">
+            <span class="card-title">Arugula Pie</span>
+            <p class="price">$11.99</p>
+          </div>
+          <div class="card-action">
+            <a id="pizza" href="#">ADD TO ORDER</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="img/ribs.jpg" alt="ribs" width="305" height="200">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Smoked Swine</span>
+            <p class="price">$14.99</p>
+          </div>
+          <div class="card-action">
+            <a id="ribs"  href="#">ADD TO ORDER</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="img/ice_cream.jpg" alt="ice-cream" width="305" height="200">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Ice Cream Biscuit</span>
+            <p class="price">$7.99</p>
+          </div>
+          <div class="card-action">
+            <a id="ice-cream" href="#">ADD TO ORDER</a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- </div> -->
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous"></script>
-    <script src="main.js"></script><!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- ORDER TABLE -->
+    <div class="col s12 m4">
+      <h4>Order</h4>
+      <table id="order-table" class="striped">
+        <thead>
+          <tr>
+            <th data-field="name">Item</th>
+            <th></th>
+            <th data-field="price">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr style="background-color: white">
+            <td></td>
+            <td>Subtotal</td>
+            <td id="subtotal">$0.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Tax</td>
+            <td id="tax">$0.00</td>
+          </tr>
+          <tr style="background-color: white">
+            <td></td>
+            <td>Total</td>
+            <td id="total">$0.00</td>
+          </tr>
+        </tfoot>
+      </table>
+
+        <!-- PRESONAL DETAILS FORMS -->
+      <div class="row">
+        <form class="col s12" id="details-form">
+          <div class="row">
+            <div class="input-field">
+              <i class="material-icons prefix"></i>
+              <input type="text" tabindex="1" id="name" name="name" class="validate" required>
+              <label for="name">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field">
+              <i class="material-icons prefix"></i>
+              <input type="tel" tabindex="2" id="telephone" name="phone" pattern="^\d{10}$" required>
+              <label for="phone">Telephone</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field">
+              <i class="material-icons prefix"></i>
+              <input type="text" tabindex="3" id="address" name="address" class="validate" required>
+              <label for="address">Address</label>
+            </div>
+          </div>
+          <div class="center-align">
+            <button class="btn waves-effect waves-light" type="submit" name="action">PLACE ORDER</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+
+  <div class="row align-items-start text-white" id="bottom_row">
+    <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-2 ml-5 pl-3 pr-3 pt-1 pb-1">
+      <h5>Galvanize Delivers</h5>
+
+       <p>Fine Dining, Delivered.</p>
+
+    </div>
+    <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-1">
+      <h2></h2>
+
+      <p> </p>
+    </div>
+    <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-1">
+      <p></p>
+      <a class="text-white" href="order.html" target="_blank">Order Delivery<a>
+    </div>
+  </div>
+<!-- </div> -->
+
+
+  <div class="row pl-2" id="footer">
+      <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-2">
+        <footer> @ 2018 Galvanize Delivers</footer>
+      </div>
+  </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   </body>
 </html>
