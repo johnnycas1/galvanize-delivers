@@ -33,6 +33,7 @@ for (var i in cart) {
 }
   var item = new Item(name, price, count);
   cart.push(item);
+  saveCart();
 }
 
 function removeItemFromCart(name) {   // Removes one item
@@ -45,6 +46,7 @@ function removeItemFromCart(name) {   // Removes one item
         break;
     }
   }
+  saveCart();
 }
 
 
@@ -57,9 +59,10 @@ function removeItemFromCartAll(name) {   // removes all items from the cart
 
     }
   }
+  saveCart();
 }
 
-
+// tests
 addItemToCart('apple',1.99,1);
 addItemToCart(' Pie',5.99,1);
 addItemToCart('Arugula Pie',8.99,1);
@@ -72,6 +75,7 @@ console.log(cart);
 
 function clearCart(){
   cart = [];
+  saveCart();
 }
 // clearCart();
 // console.log(cart);
@@ -114,9 +118,11 @@ var array = listCart();
 array[0].name = 'mistake';
 console.log(array);
 
-function saveCart() {   --> use local storage
-
+function saveCart() {   //--> use local storage
+ localStorage.setItem("shoppingCart", JSON.stringify(cart));
 }
+
+
 // loadCart() -> retrieve the cart from loal storage
 
 
