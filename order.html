@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <link href="css/materialize.css" rel="stylesheet">
-  <link href="css/materialize.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <script src="js/materialize.js"></script>
-  <script src="main.js"></script>
-  <link href="index.html" rel="stylesheet">
-  <title>Galvanize Delivers</title>
-</head>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-blue" id="navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="navbar">
-      <span class="navbar-toggler-icon" id="navbar"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01" id="navbar">
-      <a class="navbar-brand text-white" href="order.html" target="_blank" id="navbar">Galvanize Delivers</a>
-    </div>
-<ul class="nav flex-column">
-<li class="nav-item">
-  <a class="nav-link active text-white" href="order.html" target="_blank" id="navbar">Order Delivery</a>
-</li>
-</ul>
-    <!-- <div>
-      <a class="nav-link text-center" href="#">Order Delivery </a>
-    </div> -->
-  </nav>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Need to add 2 columns. Menu with 4 cards. Order column with items and prices.
-  Plus order form. -->
+
+    </script>
+    </head>
+
+    <body>
+      <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
+            <ul id="slide-out" class="side-nav">
+        <li><a href="#!">First Sidebar Link</a></li>
+        <li><a href="#!">Second Sidebar Link</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!">First</a></li>
+                  <li><a href="#!">Second</a></li>
+                  <li><a href="#!">Third</a></li>
+                  <li><a href="#!">Fourth</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#!">First Sidebar Link</a></li>
+        <li><a href="#!">Second Sidebar Link</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">First</a></li>
+          <li><a href="#!">Second</a></li>
+          <li><a href="#!">Third</a></li>
+          <li><a href="#!">Fourth</a></li>
+        </ul>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+          </div>
+        </nav>
+
+
+
   <div class="container">
     <div class="row">
 
@@ -40,7 +62,6 @@
       <div class="col s12">
         <h4>Menu</h4>
       </div>
-      <!-- CARD 1 -->
       <div class="col s12 m6">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
@@ -160,40 +181,39 @@
             <button class="btn waves-effect waves-light" type="submit" name="action">PLACE ORDER</button>
           </div>
         </form>
-
       </div>
+     </div>
     </div>
+   </div>
+   <footer class="page-footer">
+             <div class="container">
+               <div class="row">
+                 <div class="col l6 s12">
+                   <h5 class="white-text">Footer Content</h5>
+                   <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                 </div>
+                 <div class="col l4 offset-l2 s12">
+                   <h5 class="white-text">Links</h5>
+                   <ul>
+                     <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                     <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                     <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                     <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             <div class="footer-copyright">
+               <div class="container">
+               © 2014 Copyright Text
+               <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+               </div>
+             </div>
+           </footer>
 
-    </div>
-  </div>
-
-
-  <div class="row align-items-start text-white" id="bottom_row">
-    <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-2 ml-5 pl-3 pr-3 pt-1 pb-1">
-      <h5>Galvanize Delivers</h5>
-
-       <p>Fine Dining, Delivered.</p>
-
-    </div>
-    <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-1">
-      <h2></h2>
-
-      <p> </p>
-    </div>
-    <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-1">
-      <p></p>
-      <a class="text-white" href="order.html" target="_blank">Order Delivery<a>
-    </div>
-  </div>
-<!-- </div> -->
-
-
-  <div class="row pl-2" id="footer">
-      <div class="col-sm-3 col-lg-3 mt-1 mr-5 mb-1 ml-5 pl-3 pr-3 pt-1 pb-2">
-        <footer> @ 2018 Galvanize Delivers</footer>
-      </div>
-  </div>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  </body>
-</html>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="data.js"></script>
+    </body>
+  </html>
