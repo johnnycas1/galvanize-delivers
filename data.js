@@ -7,9 +7,16 @@ $(".button-collapse").sideNav();
 // Initialize collapsible (uncomment the line below if you use the dropdown variation)
 //$('.collapsible').collapsible();
 
-$('#add-to-cart').click(function(){
-  const thing = $("<p>").text("hello");
-  $(".show-cart").append("thing");
+// $('#add-to-cart').click(function(){
+//   const thing = $("<p>").text("hello");
+//   $("#hellojohnny").append("thing");
+// })
+
+$('#add-to-cart').click(function () {
+  const tr = $('<tr>')
+  const td = $('<td>').text('NoooooO!')
+  tr.append(td)
+  $('#hellojohnny').append(tr)
 })
 
 $('.add-to-cart').click(function(event){
