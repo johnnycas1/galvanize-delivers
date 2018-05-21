@@ -7,7 +7,10 @@ $(".button-collapse").sideNav();
 // Initialize collapsible (uncomment the line below if you use the dropdown variation)
 //$('.collapsible').collapsible();
 
-
+$('#add-to-cart').click(function(){
+  const thing = $("<p>").text("hello");
+  $(".show-cart").append("thing");
+})
 
 $('.add-to-cart').click(function(event){
   event.preventDefault();
@@ -29,6 +32,7 @@ function displayCart(){
   for (var i in cartArray) {
     output += "<td>" + cartArray[i].name + "</td>"
   }
+
   $('.show-cart').html(output);
   $('#total-cart').html(totalCart());
 }
@@ -87,8 +91,8 @@ function clearCart(){
   cart = [];
   saveCart();
 }
-// clearCart();
-// console.log(cart);
+
+console.log(cart);
 
 function countCart() {  // --> return total count
   var  totalCount = 0;
