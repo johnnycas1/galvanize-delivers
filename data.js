@@ -8,11 +8,31 @@ $(".button-collapse").sideNav();
 //$('.collapsible').collapsible();
 
 
-// var array = ['Royal with Cheese','Arugula Pie','Smoked Swine','Ice Cream Biscuit'];
-// array.push('extras');
-// for (var i = 0; i < array.length; i++) {
-//   console.log(array[i]);
-//   }
+
+$('.add-to-cart').click(function(event){
+  event.preventDefault();
+  var name = $(this).attr('data-name');
+  var price = Number($(this).attr('data-price'));
+
+  addItemToCart(name, price, 1);
+  displayCart();
+
+});
+
+function displayCart(){
+  console.log("*** display Cart ***");
+
+  var cartArray = listCart();
+  console.log('*** Count Cart :' + cartArray.length);
+
+  var output = '';
+  for (var i in cartArray) {
+    output += "<td>" + cartArray[i].name + "</td>"
+  }
+  $('.show-cart').html(output);
+  $('#total-cart').html(totalCart());
+}
+
 var cart =[];
 
 var Item = function(name, price, count) {  //function literal
@@ -28,11 +48,12 @@ function addItemToCart(name, price, count) {
 for (var i in cart) {
     if (cart[i].name === name) {
       cart[i].count += count;
+      saveCart();
       return;
     }
-}
   var item = new Item(name, price, count);
   cart.push(item);
+}
   saveCart();
 }
 
@@ -62,17 +83,6 @@ function removeItemFromCartAll(name) {   // removes all items from the cart
   saveCart();
 }
 
-// tests
-// addItemToCart('apple',1.99,1);
-// addItemToCart(' Pie',5.99,1);
-// addItemToCart('Arugula Pie',8.99,1);
-// addItemToCart('shoe',5.99,1);
-// addItemToCart('Arugula Pie',7.99,3);
-// addItemToCart('banana',8.99,1);
-
-console.log(cart.length);
-console.log(cart);
-
 function clearCart(){
   cart = [];
   saveCart();
@@ -92,7 +102,7 @@ console.log( countCart() );
 function totalCart() { //--> return total cost
  var totalCost = 0;
  for (var i in cart) {
-   totalCost += cart[i].price;
+   totalCost += cart[i].price * cart[i].count;
     }
     return totalCost;
 }
@@ -127,32 +137,15 @@ function loadCart() {//-> retrieve the cart from loal storage
 cart = JSON.parse(localStorage.getItem("shoppingCart"));
 }
 
-loadCart();
+ loadCart();
+ displayCart();
+
+
+
 
 var array = listCart();
+console.log("---------------");
 console.log(array);
-
-// var a = new Item(); // {name: "", price: 0.0, count: 0}
-// // cart.push(new Item('Arugula Pie',8.99,1));
-// // cart.push(new Item('Smoked Swine',7.99,2));
-
-
-
-// console.log(cart);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

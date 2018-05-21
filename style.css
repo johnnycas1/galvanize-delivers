@@ -4,6 +4,7 @@
   background-size: cover;
   height: 370px;
   border-radius: 0rem;
+  width: 100%
 
 }
 
@@ -15,7 +16,7 @@
 }
 
 #titles {
-font-size: 40px;
+font-size: 35px;
  color: #ff4081;
 }
 
@@ -24,6 +25,7 @@ p {
 }
 
 #navbar, #bottom_row{
+
   background-color: #196cd1;
 
 }
@@ -31,6 +33,10 @@ p {
 a {
   color: white;
 
+}
+
+h4 {
+  font-size: 35px;
 }
 
 #footer_links{
@@ -50,3 +56,18 @@ a {
    text-decoration: none;
 
  }
+
+ #nav {
+
+    background-color: #196cd1;
+}
+
+#brand {
+  font-size: 1.25rem;
+}
+.btn{
+  background-color: #ff4081;
+}
+.btn:hover {
+  background-color: #ff4081;
+}
