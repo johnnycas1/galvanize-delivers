@@ -14,7 +14,28 @@ $(".button-collapse").sideNav();
 
 $('#add-to-cart').click(function () {
   const tr = $('<tr>')
-  const td = $('<td>').text('NoooooO!')
+  const td = $('<td>').text('Smoked Swine')
+  tr.append(td)
+  $('#hellojohnny').append(tr)
+})
+
+$('#Royale-with-Cheese').click(function () {
+  const tr = $('<tr>')
+  const td = $('<td>').text('Royale with Cheese')
+  tr.append(td)
+  $('#hellojohnny').append(tr)
+})
+
+$('#Arugula-Pie').click(function () {
+  const tr = $('<tr>')
+  const td = $('<td>').text('Arugula Pie')
+  tr.append(td)
+  $('#hellojohnny').append(tr)
+})
+
+$('#Ice-Cream-Biscuit').click(function () {
+  const tr = $('<tr>')
+  const td = $('<td>').text('Ice Cream Biscuit')
   tr.append(td)
   $('#hellojohnny').append(tr)
 })
