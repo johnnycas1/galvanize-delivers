@@ -12,32 +12,73 @@ $(".button-collapse").sideNav();
 //   $("#hellojohnny").append("thing");
 // })
 
-$('#add-to-cart').click(function () {
+$('#Smoked-Swine').click(function () {
   const tr = $('<tr>')
-  const td = $('<td>').text('Smoked Swine')
-  tr.append(td)
+  const td1 = $('<td>').text('Smoked Swine')
+  const tdc = $('<td>').text("xxx")
+  const td2 = $('<td>').text('$14.99')
+  tr.append(td1)
+  tr.append(tdc)
+  tr.append(td2)
   $('#hellojohnny').append(tr)
+   addItemToCart()
+
+  var name = $(this).attr('data-name');
+  var price = Number($(this).attr('data-price'));
+
+  addItemToCart(name, price, 1);
+
 })
 
 $('#Royale-with-Cheese').click(function () {
   const tr = $('<tr>')
-  const td = $('<td>').text('Royale with Cheese')
-  tr.append(td)
+  const td3 = $('<td>').text('Royale with Cheese')
+  const tdc = $('<td>').text(countCart())
+  const td4 = $('<td>').text('8.99')
+  tr.append(td3)
+  tr.append(tdc)
+  tr.append(td4)
   $('#hellojohnny').append(tr)
+
+  var name = $(this).attr('data-name');
+  var price = Number($(this).attr('data-price'));
+
+  addItemToCart(name, price, 1);
+
 })
 
 $('#Arugula-Pie').click(function () {
   const tr = $('<tr>')
-  const td = $('<td>').text('Arugula Pie')
-  tr.append(td)
+  const td5 = $('<td>').text('Arugula Pie')
+  const tdc = $('<td>').text(countCart())
+  const td6 = $('<td>').text('11.99')
+  tr.append(td5)
+  tr.append(tdc)
+  tr.append(td6)
   $('#hellojohnny').append(tr)
+
+  var name = $(this).attr('data-name');
+  var price = Number($(this).attr('data-price'));
+
+  addItemToCart(name, price, 1);
+
 })
 
 $('#Ice-Cream-Biscuit').click(function () {
   const tr = $('<tr>')
-  const td = $('<td>').text('Ice Cream Biscuit')
-  tr.append(td)
+  const td7 = $('<td>').text('Ice Cream Biscuit')
+  const tdc = $('<td>').text(countCart())
+  const td8 = $('<td>').text('7.99')
+  tr.append(td7)
+  tr.append(tdc)
+  tr.append(td8)
   $('#hellojohnny').append(tr)
+
+  var name = $(this).attr('data-name');
+  var price = Number($(this).attr('data-price'));
+
+  addItemToCart(name, price, 1);
+
 })
 
 $('.add-to-cart').click(function(event){
@@ -46,7 +87,7 @@ $('.add-to-cart').click(function(event){
   var price = Number($(this).attr('data-price'));
 
   addItemToCart(name, price, 1);
-  displayCart();
+
 
 });
 
@@ -162,6 +203,8 @@ function listCart() {  //-> array of Items
 
 function saveCart() {   //--> use local storage
  localStorage.setItem("shoppingCart", JSON.stringify(cart));
+ console.log("working");
+
 }
 
 
